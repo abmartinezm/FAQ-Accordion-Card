@@ -1,497 +1,125 @@
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+<!DOCTYPE html>
+<html lang="en">
 
-:root {
-  /*Text*/
-  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
-  --Soft-red: hsl(14, 88%, 65%);
-  /*Neutral text*/
-  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
-  --Dark-grayish-blue: hsl(240, 6%, 50%);
-  /*Background gradient:*/
-  --Soft-violet: hsl(273, 75%, 66%);
-  --Soft-blue: hsl(240, 73%, 65%);
-  /*Dividers*/
-  --Light-grayish-blue: hsl(240, 5%, 91%);
-  /*Font*/
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-body {
-  font-family: "Kumbh Sans", sans-serif;
-  margin: 0;
-  padding: 0;
-  Font-size: 12px;
-  background: linear-gradient(to top, hsl(240, 73%, 65%), hsl(273, 75%, 66%)) no-repeat fixed;
-  box-sizing: border-box;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-.container {
-  background-color: white;
-  position: absolute;
-  width: 750px;
-  height: 450px;
-  left: 50%;
-  right: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 20px;
-  display: flex;
-  z-index: 1;
+  <link rel="stylesheet" href="styles.css">
 
-  header{
-    width: 50%;
-      height: 100%;
-      // background: lightblue;
-      
+  <title>Frontend Mentor | FAQ Accordion Card</title>
 
-    .img {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      background: url("./images/bg-pattern-desktop.svg") no-repeat;
-      background-position: -620px -360px;
-      overflow: hidden;
-      z-index: 2;
-      display: flex;
-  
-      .desktop {
-        position: absolute;
-        z-index: 1;
-        top: 50px;
-        left: -70px;
-        width: 410px;
-        height: 300px;
-        overflow: hidden;
-      }
-    }
-  
-    .cube {
-      top: 150px;
-      position: absolute;
-      z-index: 500;
-      left: -92.5px;
-    }
-  }
-
-
-
-  .questions {
-    width: 50%;
-    /*
-  height: auto;
-  position: relative;
-  margin-top: auto;
-  margin-bottom: auto;
-  float: right; */
-    cursor: pointer;
-    display: flex;
-    flex-direction: left;
-    height: 100%;
-
-
-    .questions-container {
-      background: #fff;
-      transition: 0.3s ease all;
-      width: 80%;
-      margin-top: 30px;
-      height: 70%;
-      margin-left: 40px;
-
-      h1 {
-        /* font-size: 30px;
-      font-weight: 700;
-      text-align: justify; */
-        margin-top: 30px;
-        margin-bottom: 0;
-      }
-
-      .question-container {
-        width: 100%;
-        height: 16%;
-        position: relative;
-
-        
-
-        .label {
-          font-size: 12px;
-          margin: 15px 0 0 0;
-          border-bottom: 1px solid hsl(240, 5%, 91%);
-          width: 90%;
-          cursor: pointer;
-          position: relative;
-          height: 15px;
-          /* height: 10px; */
-        }
-
-        .label:hover {
-          color: var(--Soft-red);
-        }
-
-        .arrow {
-          float: right;
-        }
-
-
-        .content {
-          color: rgb(177, 172, 172);
-          max-height: 0;
-          text-align: justify;
-          overflow: hidden;
-          transition: 0.3s ease-in all;
-          font-size: 12px;
-          height: 40px;
-
-          .answer {
-            margin: 0;
-            font-weight: normal;
-          }
-
-        }
-
-        
-
-        .question .arrow.activo {
-          transform: rotate(180deg);
-        }
-
-        .activa {
-          margin-top: 2px;
-          max-height: 30px;
-        }
-
-      }
-
-      .question-container.active .label {
-        border-bottom: 0px;
-      }
-
-      .active {
-        font-weight: bold;
-        color: #000;
-        transition: 0.1s ease-in all;
-        border-bottom: 1px solid hsl(240, 5%, 91%);
-      }
-
-    }
-
-
-
-
-  }
-
-
-
-}
-
-
-
-.attribution {
-  position: absolute;
-  top: 80%;
-  width: 25%;
-  left: 35%;
-}
-
-
-@media screen and (max-width: 850px) {
-
-  .container{
-    width: 700px;
-  height: 450px;
-  }
-}
-
-@media screen and (max-width: 750px) {
-
-  .container{
-    width: 600px;
-  height: 430px;
-
-  header{
-    .img {
-      width: 60%;
-      height: 20%;
-      position: relative;
-      /* background-position: -200px 360px; */
-      background-size: 350px 350px;
-      background-position-x: center;
-      background-position-y: -150px;
-      overflow: visible;
-      display: block;
-  
-      .desktop {
-        top: 90px;
-        left: -30px;
-        width: 220px;
-        height: 190px;
-        overflow: visible;
-        width: 340px;
-        height: 200px;
-      }
-  
-    }
-  
-    .cube {
-      left: -8px;
-      top: 39%;
-  
-      img {
-        width: 90px;
-        height: 90px;
-      }
-  
-    }
-  }
-
-
-  .questions-container{
-    .question-container{
-      .question{
-        font-size: 10px;
-      }
-
-      .content{
-        .answer{
-          font-size: 8px;
-        }
-      }
-    }
-  }
-  }
-}
-
-@media screen and (max-width: 635px) {
-
-  .container{
-    width: 500px;
-  height: 400px;
-
-
- header{
-  .img{
-    width: 45%;
-   .desktop {
-     top: 90px;
-     left: -20px;
- 
-     overflow: visible;
-     width: 270px;
-     height: 200px;
-   }
- 
-   .cube {
-     left: -4px;
-     top: 36%;
-   }
-  }
- }
-  
-
-  .questions-container{
-    background-color: aquamarine;
-    h1{
-      font-size: 12px;
-     
-      
-    }
-    .question-container{
-      .question{
-        font-size: 9px;
-      }
-
-      .content{
-        .answer{
-          font-size: 8px;
-        }
-      }
-    }
-  }
-
-  }
-}
-
-@media screen and (max-width: 520px) {
-
-  .container{
-    width: 400px;
-  height: 300px;
-  // background: aquamarine;
-
-
- header{
-  .img{
-    width: 40%;
-   .desktop {
-     top: 30px;
-     left: -20px;
- 
-     overflow: visible;
-     width: 190px;
-     height: 180px;
-   }
-  }
- }
-  
-
- .questions{
-   width: 70%;
-   height: auto;
-   margin-top: -6vh;
-  .questions-container{
-    // background-color: aquamarine;
-    background: transparent;
-    width: 80%;
-    top: -3vh;
-    // position:absolute;
-    
-  
-    h1{
-      font-size: 12px;
-     
-      
-    }
-    .question-container{
-      margin-bottom: -1vh;
-      .question{
-        font-size: 8px;
-      }
-
-      .content{
-        .answer{
-          font-size: 7px;
-        }
-      }
-    }
-  }
- }
-
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .container {
-    position: absolute;
-    width: 90vw;
-    height: 70vh;
-    margin-left: 5%;
-    margin-right: 5%;
-    top: 60%;
-    display: block;
-    z-index: 1;
-    left: 45%;
-    right: 0%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-    // .questions {
-    //   width: 50%;
-    //   cursor: pointer;
-    //   display: block;
-    //   height: 100%;
-    //   position: relative;
-    //   /* background-color: violet; */
-    // }
-
-   header{
-    width: 100%;
-    height: 20%;
-    .img {
-      width: 100%;
-      height: 20%;
-      position: relative;
-      /* background-position: -200px 360px; */
-      background-size: 250px 250px;
-      background-position-x: center;
-      background-position-y: -150px;
-      overflow: visible;
-      display: block;
-
-      .desktop {
-        top: -102px;
-        left: 50px;
-        width: 240px;
-        height: 170px;
-        overflow: visible;
-      }
-
-    }
-  
-    .cube {
-      left: 48px;
-      top: -39px;
-
-      img {
-        width: 90px;
-        height: 90px;
-      }
-
-    }
-   }
-  
-
-    .questions {
-      width: 100%;
-      margin-top: 0px;
-      height: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      /* margin-bottom: 60px; */
-
-      .questions-container {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: -30px;
-
-        h1 {
-          margin-bottom: 20px;
-          text-align: center;
-          font-size: 16px;
-        }
-
-        .question-container {
-
-          height: 65px;
-
-          .question{
-            font-size: 13px;
-          }
-
-          .label {
-            width: 100%;
-            margin-top: 7px;
-            height: 25px;
-          }
-
-          .content {
-            margin-top: 5px;
-
-            .answer{
-              font-size: 12px;
-            }
-          }
-
-
-        }
-
-      }
-
-      
-
-    }
-
-    .activa {
-      margin-top: 0px;
-      max-height: 55px;
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
       font-size: 11px;
+      text-align: center;
     }
 
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
 
-  }
+<body>
+
+  <div class="container">
+    <header>
+      <div class="img">
+        <img class="desktop" src="images/illustration-woman-online-desktop.svg" alt="">
+      </div>
+  
+      <div class="cube">
+        <img src="images/illustration-box-desktop.svg" alt="">
+      </div>
+    </header>
 
 
-  .attribution {
-    top: 100%;
-    width: 70%;
-    left: 15%;
-  }
-}
+    <main class="questions">
 
-/*# sourceMappingURL=styles.scss.map */
+
+      <!-- Accordion -->
+      <div class="questions-container " id="categorias">
+        <h1>FAQ</h1>
+
+        <div class="question-container ">
+
+          <div class="label"><span class="question" data-categoria="members" id="prueba">How many team members can I
+              invite? <img class="arrow" src="images/icon-arrow-down.svg" alt=""> </span></div>
+
+
+          <div class="content">
+            <p class="answer" data-categoria="members" id="info">You can invite up to 2 additional users on the Free
+              plan. There is no limit on
+              team members for the Premium plan.</p>
+          </div>
+          <!-- <div class="panel"> -->
+
+          <!-- </div> -->
+        </div>
+
+
+        <div class="question-container">
+
+          <div class="label"> <span class="question">What is the maximum file upload size? <img class="arrow"
+                src="images/icon-arrow-down.svg" alt=""> </span></div>
+          <div class="content">
+            <p class="answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </div>
+        </div>
+
+        <div class="question-container">
+
+          <div class="label"> <span class="question">How do I reset my password? <img class="arrow"
+                src="images/icon-arrow-down.svg" alt=""> </span></div>
+          <div class="content">
+            <p class="answer">Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.</p>
+          </div>
+        </div>
+
+        <div class="question-container">
+
+          <div class="label"><span class="question">Can I cancel my subscription? <img class="arrow"
+                src="images/icon-arrow-down.svg" alt=""> </span></div>
+          <div class="content">
+            <p class="answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </div>
+        </div>
+
+        <div class="question-container">
+
+          <div class="label"><span class="question">Do you provide additional support? <img class="arrow"
+                src="images/icon-arrow-down.svg" alt=""> </span></div>
+          <div class="content">
+            <p class="answer">Chat and email support is available 24/7. Phone lines are open during normal business
+              hours.</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </main>
+  </div>
+
+
+  <footer>
+    <div class="attribution">
+  
+      Coded by <a href="https://github.com/abmartinezm" target="_blank">Abraham Martinez Marquez</a>.
+    </div>
+  </footer>
+  
+
+  <script src="main.js"></script>
+</body>
+
+</html>

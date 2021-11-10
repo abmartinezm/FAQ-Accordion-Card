@@ -37,32 +37,39 @@ body {
   display: flex;
   z-index: 1;
 
-  .img {
-    position: relative;
+  header{
     width: 50%;
-    height: 100%;
-    background: url("./images/bg-pattern-desktop.svg") no-repeat;
-    background-position: -620px -360px;
-    overflow: hidden;
-    z-index: 2;
-    display: flex;
+      height: 100%;
+      // background: lightblue;
+      
 
-    .desktop {
-      position: absolute;
-      z-index: 1;
-      top: 50px;
-      left: -70px;
-      width: 410px;
-      height: 300px;
+    .img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: url("./images/bg-pattern-desktop.svg") no-repeat;
+      background-position: -620px -360px;
       overflow: hidden;
+      z-index: 2;
+      display: flex;
+  
+      .desktop {
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        left: -70px;
+        width: 410px;
+        height: 300px;
+        overflow: hidden;
+      }
     }
-  }
-
-  .cube {
-    top: 150px;
-    position: absolute;
-    z-index: 500;
-    left: -92.5px;
+  
+    .cube {
+      top: 150px;
+      position: absolute;
+      z-index: 500;
+      left: -92.5px;
+    }
   }
 
 
@@ -199,38 +206,40 @@ body {
     width: 600px;
   height: 430px;
 
-  .img {
-    width: 60%;
-    height: 20%;
-    position: relative;
-    /* background-position: -200px 360px; */
-    background-size: 350px 350px;
-    background-position-x: center;
-    background-position-y: -150px;
-    overflow: visible;
-    display: block;
-
-    .desktop {
-      top: 90px;
-      left: -30px;
-      width: 220px;
-      height: 190px;
+  header{
+    .img {
+      width: 60%;
+      height: 20%;
+      position: relative;
+      /* background-position: -200px 360px; */
+      background-size: 350px 350px;
+      background-position-x: center;
+      background-position-y: -150px;
       overflow: visible;
-      width: 340px;
-      height: 200px;
+      display: block;
+  
+      .desktop {
+        top: 90px;
+        left: -30px;
+        width: 220px;
+        height: 190px;
+        overflow: visible;
+        width: 340px;
+        height: 200px;
+      }
+  
     }
-
-  }
-
-  .cube {
-    left: -8px;
-    top: 39%;
-
-    img {
-      width: 90px;
-      height: 90px;
+  
+    .cube {
+      left: -8px;
+      top: 39%;
+  
+      img {
+        width: 90px;
+        height: 90px;
+      }
+  
     }
-
   }
 
 
@@ -257,20 +266,22 @@ body {
   height: 400px;
 
 
- .img{
-   width: 45%;
-  .desktop {
-    top: 90px;
-    left: -20px;
-
-    overflow: visible;
-    width: 270px;
-    height: 200px;
-  }
-
-  .cube {
-    left: -4px;
-    top: 36%;
+ header{
+  .img{
+    width: 45%;
+   .desktop {
+     top: 90px;
+     left: -20px;
+ 
+     overflow: visible;
+     width: 270px;
+     height: 200px;
+   }
+ 
+   .cube {
+     left: -4px;
+     top: 36%;
+   }
   }
  }
   
@@ -306,15 +317,17 @@ body {
   // background: aquamarine;
 
 
- .img{
-   width: 40%;
-  .desktop {
-    top: 30px;
-    left: -20px;
-
-    overflow: visible;
-    width: 190px;
-    height: 180px;
+ header{
+  .img{
+    width: 40%;
+   .desktop {
+     top: 30px;
+     left: -20px;
+ 
+     overflow: visible;
+     width: 190px;
+     height: 180px;
+   }
   }
  }
   
@@ -377,6 +390,9 @@ body {
     //   /* background-color: violet; */
     // }
 
+   header{
+    width: 100%;
+    height: 20%;
     .img {
       width: 100%;
       height: 20%;
@@ -408,6 +424,7 @@ body {
       }
 
     }
+   }
   
 
     .questions {
@@ -426,11 +443,16 @@ body {
         h1 {
           margin-bottom: 20px;
           text-align: center;
+          font-size: 16px;
         }
 
         .question-container {
 
           height: 65px;
+
+          .question{
+            font-size: 13px;
+          }
 
           .label {
             width: 100%;
@@ -440,6 +462,10 @@ body {
 
           .content {
             margin-top: 5px;
+
+            .answer{
+              font-size: 12px;
+            }
           }
 
 

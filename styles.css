@@ -36,9 +36,13 @@ body {
   display: flex;
   z-index: 1;
 }
-.container .img {
-  position: relative;
+.container header {
   width: 50%;
+  height: 100%;
+}
+.container header .img {
+  position: relative;
+  width: 100%;
   height: 100%;
   background: url("./images/bg-pattern-desktop.svg") no-repeat;
   background-position: -620px -360px;
@@ -46,7 +50,7 @@ body {
   z-index: 2;
   display: flex;
 }
-.container .img .desktop {
+.container header .img .desktop {
   position: absolute;
   z-index: 1;
   top: 50px;
@@ -55,7 +59,7 @@ body {
   height: 300px;
   overflow: hidden;
 }
-.container .cube {
+.container header .cube {
   top: 150px;
   position: absolute;
   z-index: 500;
@@ -158,7 +162,7 @@ body {
     width: 600px;
     height: 430px;
   }
-  .container .img {
+  .container header .img {
     width: 60%;
     height: 20%;
     position: relative;
@@ -169,7 +173,7 @@ body {
     overflow: visible;
     display: block;
   }
-  .container .img .desktop {
+  .container header .img .desktop {
     top: 90px;
     left: -30px;
     width: 220px;
@@ -178,11 +182,11 @@ body {
     width: 340px;
     height: 200px;
   }
-  .container .cube {
+  .container header .cube {
     left: -8px;
     top: 39%;
   }
-  .container .cube img {
+  .container header .cube img {
     width: 90px;
     height: 90px;
   }
@@ -198,17 +202,17 @@ body {
     width: 500px;
     height: 400px;
   }
-  .container .img {
+  .container header .img {
     width: 45%;
   }
-  .container .img .desktop {
+  .container header .img .desktop {
     top: 90px;
     left: -20px;
     overflow: visible;
     width: 270px;
     height: 200px;
   }
-  .container .img .cube {
+  .container header .img .cube {
     left: -4px;
     top: 36%;
   }
@@ -230,10 +234,10 @@ body {
     width: 400px;
     height: 300px;
   }
-  .container .img {
+  .container header .img {
     width: 40%;
   }
-  .container .img .desktop {
+  .container header .img .desktop {
     top: 30px;
     left: -20px;
     overflow: visible;
@@ -277,7 +281,11 @@ body {
     right: 0%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
-  .container .img {
+  .container header {
+    width: 100%;
+    height: 20%;
+  }
+  .container header .img {
     width: 100%;
     height: 20%;
     position: relative;
@@ -288,18 +296,18 @@ body {
     overflow: visible;
     display: block;
   }
-  .container .img .desktop {
+  .container header .img .desktop {
     top: -102px;
     left: 50px;
     width: 240px;
     height: 170px;
     overflow: visible;
   }
-  .container .cube {
+  .container header .cube {
     left: 48px;
     top: -39px;
   }
-  .container .cube img {
+  .container header .cube img {
     width: 90px;
     height: 90px;
   }
@@ -319,9 +327,13 @@ body {
   .container .questions .questions-container h1 {
     margin-bottom: 20px;
     text-align: center;
+    font-size: 16px;
   }
   .container .questions .questions-container .question-container {
     height: 65px;
+  }
+  .container .questions .questions-container .question-container .question {
+    font-size: 13px;
   }
   .container .questions .questions-container .question-container .label {
     width: 100%;
@@ -330,6 +342,9 @@ body {
   }
   .container .questions .questions-container .question-container .content {
     margin-top: 5px;
+  }
+  .container .questions .questions-container .question-container .content .answer {
+    font-size: 12px;
   }
   .container .activa {
     margin-top: 0px;
