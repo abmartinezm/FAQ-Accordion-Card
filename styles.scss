@@ -184,6 +184,176 @@ body {
   left: 35%;
 }
 
+
+@media screen and (max-width: 850px) {
+
+  .container{
+    width: 700px;
+  height: 450px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  .container{
+    width: 600px;
+  height: 430px;
+
+  .img {
+    width: 60%;
+    height: 20%;
+    position: relative;
+    /* background-position: -200px 360px; */
+    background-size: 350px 350px;
+    background-position-x: center;
+    background-position-y: -150px;
+    overflow: visible;
+    display: block;
+
+    .desktop {
+      top: 90px;
+      left: -30px;
+      width: 220px;
+      height: 190px;
+      overflow: visible;
+      width: 340px;
+      height: 200px;
+    }
+
+  }
+
+  .cube {
+    left: -8px;
+    top: 39%;
+
+    img {
+      width: 90px;
+      height: 90px;
+    }
+
+  }
+
+
+  .questions-container{
+    .question-container{
+      .question{
+        font-size: 10px;
+      }
+
+      .content{
+        .answer{
+          font-size: 8px;
+        }
+      }
+    }
+  }
+  }
+}
+
+@media screen and (max-width: 635px) {
+
+  .container{
+    width: 500px;
+  height: 400px;
+
+
+ .img{
+   width: 45%;
+  .desktop {
+    top: 90px;
+    left: -20px;
+
+    overflow: visible;
+    width: 270px;
+    height: 200px;
+  }
+
+  .cube {
+    left: -4px;
+    top: 36%;
+  }
+ }
+  
+
+  .questions-container{
+    background-color: aquamarine;
+    h1{
+      font-size: 12px;
+     
+      
+    }
+    .question-container{
+      .question{
+        font-size: 9px;
+      }
+
+      .content{
+        .answer{
+          font-size: 8px;
+        }
+      }
+    }
+  }
+
+  }
+}
+
+@media screen and (max-width: 520px) {
+
+  .container{
+    width: 400px;
+  height: 300px;
+  // background: aquamarine;
+
+
+ .img{
+   width: 40%;
+  .desktop {
+    top: 30px;
+    left: -20px;
+
+    overflow: visible;
+    width: 190px;
+    height: 180px;
+  }
+ }
+  
+
+ .questions{
+   width: 70%;
+   height: auto;
+   margin-top: -6vh;
+  .questions-container{
+    // background-color: aquamarine;
+    background: transparent;
+    width: 80%;
+    top: -3vh;
+    // position:absolute;
+    
+  
+    h1{
+      font-size: 12px;
+     
+      
+    }
+    .question-container{
+      margin-bottom: -1vh;
+      .question{
+        font-size: 8px;
+      }
+
+      .content{
+        .answer{
+          font-size: 7px;
+        }
+      }
+    }
+  }
+ }
+
+  }
+}
+
 @media screen and (max-width: 375px) {
   .container {
     position: absolute;
